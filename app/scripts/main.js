@@ -26,7 +26,7 @@ function fetch() {
 	
 	$('#loading').show();
 
-	var requestURL = 'data.php';
+	var requestURL = '//' + window.location.hostname + '/data.php';
 
 	if (isLocalhost) {
 		requestURL = '//localhost:8080/data.php';
