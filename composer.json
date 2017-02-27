@@ -1,0 +1,18 @@
+{	
+	"repositories": [{
+	    "type": "package",
+	    "package": {
+	        "name": "nutshell-api-php", 
+	        "version": "1",
+	        "source": {
+	            "url": "https://github.com/nutshellcrm/nutshell-api-php",
+	            "type": "git",
+	            "reference": "master"
+	        }
+	    }
+	}],
+	"require" : {
+	  "nutshell-api-php": "1",
+	  "vlucas/phpdotenv": "^2.4"
+	}
+}

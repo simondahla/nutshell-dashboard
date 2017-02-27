@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A simple Nutshell dashboard for Acme Inc.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Acme Inc. Dashboard</title>
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    
+  </head>
+  <body>
+
+<section class="hero is-primary is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">Acme Inc.</h1>
+    </div>
+  </div>
+</section>
+<div id="loading" class="spinner"></div>
+<section id="main" class="section content is-medium">
+<div class="columns">
+  <div class="column">
+    <h6>Latest Lead</h6>
+    <div id="lead-target"></div>
+
+  </div>
+
+  <div class="column">
+  <h6>Accounts with leads</h6>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Account name</th>
+      <th>Last contacted</th>
+    </tr>
+  </thead>
+  <tbody id="account-target">
+
+  </tbody>
+  </div>
+</div>
+
+</section>
+    
+
+        <script id="account-template" type="text/x-handlebars-template">
+          {{#each this}}
+          <tr>
+            <td>{{name}}</td>
+            
+            <td>{{#if lastContactedDate}}<time datetime="{{lastContactedDate}}"></time>{{else}}-{{/if}}</td>
+          </tr>
+      {{/each}}
+    </script>
+
+    <script id="lead-template" type="text/x-handlebars-template">
+    <div class="card">
+
+  <div class="card-content">
+    <div class="media">
+      <div class="media-left">
+        <figure class="image">
+          <img data-email="{{email.--primary}}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{name.displayName}}">
+        </figure>
+      </div>
+      <div class="media-content">
+        <p class="title is-4">{{name.displayName}}</p>
+        <p class="subtitle is-6">{{email.--primary}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+    </script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/handlebars/handlebars.js"></script>
+    <script src="/bower_components/js-md5/src/md5.js"></script>
+    <script src="/bower_components/moment/moment.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
