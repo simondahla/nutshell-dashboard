@@ -62,6 +62,7 @@ Key: `43c789d483fd76547b1f157e3cf5e580b95b9d8c`
 - Back-end part is serving all data on purpose so it can be used in other projects or in other purposes as well
 - Asumes that you cast the URL to a chromecast
 - Only quering the first 100 accounts, default value can be changed [here](https://github.com/simondahla/nutshell-dashboard/blob/master/app/data.php#L14) or by passing a query parameter with the request `?limit=500`
+- The data is cached in _localstorage_ & auto updates every 5 minutes
 
 ##2do
 - [ ] Add back-end error handling
