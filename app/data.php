@@ -11,7 +11,7 @@ $username = getenv('USERNAME');
 $key = getenv('KEY');
 $api = new NutshellApi($username, $key);
 
-$limit = 50;
+$limit = 100;
 
 /* Check if responses limit is set or use default. */
 if(isset($_GET['limit'])) {
