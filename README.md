@@ -58,8 +58,12 @@ Key: `43c789d483fd76547b1f157e3cf5e580b95b9d8c`
 
 ##Notes
 - Back-end part is serving all data on purpose so it can be used in other projects or in other purposes as well
-- Missing error handling
-- Security
-  - All data publiclly available
-- Running a dashboard with a chromecast
-- Would clean up data for _"production"_
+- Asumes that you cast the URL to a chromecast
+- Only quering the first 100 accounts, default value can be changed [here](https://github.com/simondahla/nutshell-dashboard/blob/master/app/data.php#L14)
+
+##2do
+- [ ] Add back-end error handling
+- [ ] Add JS error handling
+- [ ] Add notifications so the user gets notified when the dashboard is auto-updated and when there is new data
+- [ ] Add Security layer so the dashboard is not available with out a secret/key
+- [ ] Clean up the data that is served (from back-end) and stored in front-end
