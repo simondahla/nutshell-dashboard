@@ -30,6 +30,15 @@ Key: `43c789d483fd76547b1f157e3cf5e580b95b9d8c`
 - [ ] Store the results in a database
 
 ##Installation
+
+###Prerequisites
+- [Composer](https://getcomposer.org/)
+- [Gulp](http://gulpjs.com/)
+- [NPM](https://www.npmjs.com/)
+- [Bower](https://bower.io/)
+- PHP
+
+###Install dev locally
 1. Clone the repo
 
 2. Create a `.env` file in the root directory of the project. Set the two following variables to match your credentials.
@@ -39,16 +48,9 @@ Key: `43c789d483fd76547b1f157e3cf5e580b95b9d8c`
    KEY="43c789d483fd76547b1f157e3cf5e580b95b9d8c"
    ```
 
-3. Run composer install to get PHP dependencies `composer install`
+3. Run `composer install` to get PHP dependencies
 
 4. Run `npm install && bower install` to install front-end dependencies
-
-###Prerequisites
-- [Composer](https://getcomposer.org/)
-- [Gulp](http://gulpjs.com/)
-- [NPM](https://www.npmjs.com/)
-- [Bower](https://bower.io/)
-- PHP
 
 
 ### Running locally
@@ -59,7 +61,7 @@ Key: `43c789d483fd76547b1f157e3cf5e580b95b9d8c`
 ##Notes
 - Back-end part is serving all data on purpose so it can be used in other projects or in other purposes as well
 - Asumes that you cast the URL to a chromecast
-- Only quering the first 100 accounts, default value can be changed [here](https://github.com/simondahla/nutshell-dashboard/blob/master/app/data.php#L14)
+- Only quering the first 100 accounts, default value can be changed [here](https://github.com/simondahla/nutshell-dashboard/blob/master/app/data.php#L14) or by passing a query parameter with the request `?limit=500`
 
 ##2do
 - [ ] Add back-end error handling
