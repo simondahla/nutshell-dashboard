@@ -1,0 +1,6 @@
+[submodule "nutshell-api-php"]
+	path = nutshell-api-php
+	url = https://github.com/nutshellcrm/nutshell-api-php
+[submodule "inc/nutshell-api-php"]
+	path = inc/nutshell-api-php
+	url = https://github.com/nutshellcrm/nutshell-api-php
